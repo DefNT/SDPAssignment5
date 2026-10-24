@@ -1,4 +1,4 @@
-### Assignment 4 Strategy Pattern 
+# Assignment 4 Strategy Pattern 
 
 Github: https://github.com/DefNT/SDPAssignment5.git
 
@@ -19,32 +19,32 @@ The PricingCalculator class acts as the Context. It stores the selected strategy
 
 ## Clean Code Principles
 
-# 1. Meaningful names
+### 1. Meaningful names
 
 <img width="662" height="249" alt="image" src="https://github.com/user-attachments/assets/00e10126-6520-498c-8d0e-d212946bb273" />
 
 The names calculateTotal, unitPrice, and quantity make the method easier to understand. Strategy class names also reveal which pricing algorithm each class implements
 
-# 2. Single Responsibility Principle
+### 2. Single Responsibility Principle
 
 <img width="667" height="497" alt="image" src="https://github.com/user-attachments/assets/d6a8fca2-f57a-43e3-ab8c-3106fb7f5959" />
 
 The percentage strategy contains the percentage calculation, while the other strategies implement their own algorithms. This makes each class easier to read
 
-# 3. Replacing Conditionals with Polymorphism
+### 3. Replacing Conditionals with Polymorphism
 
 <img width="668" height="431" alt="image" src="https://github.com/user-attachments/assets/032288ec-b456-476f-8e85-8d692504aae3" />
 
 
 The Context calls the same method regardless of which strategy is selected. The actual calculation is performed by the concrete strategy. The if statements used for input validation in PricingCalculator do not select between discount algorithms
 
-# 4. Dependency Inversion Principle
+### 4. Dependency Inversion Principle
 
 <img width="673" height="521" alt="image" src="https://github.com/user-attachments/assets/8231ce9d-f929-4f2b-a654-e65a0c52fd1f" />
 
 The Context can now store any implementation of the DiscountStrategy interface. This reduces coupling between the Context and the concrete strategies
 
-# 5. Open/Closed Principle
+### 5. Open/Closed Principle
 
 Example:
 ```
@@ -58,7 +58,7 @@ public class SeasonalDiscountStrategy implements DiscountStrategy {
 ```
 A new strategy can implement the interface and then be supplied to the existing Context. PricingCalculator does not need to be modified. The example above shows a possible extension
 
-# 6. Input Validation 
+### 6. Input Validation 
 
 <img width="673" height="458" alt="image" src="https://github.com/user-attachments/assets/993f03eb-9b14-4819-87b0-f2f606cb32dd" />
 
